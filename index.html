@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>click ivent</title>
+</head>
+<body>
+
+    <label for="logo">Mujahid First menu</label>
+    <div id="toggle"></div>
+    <div id="sidebar">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About </a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">product</a>
+            </li>
+            <li>
+                <a href="#">Contect</a>
+            </li>
+            <li>
+                <a href="#">Sign up</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+        const toggle = document.getElementById('toggle');
+        const sidebar = document.getElementById('sidebar');
+
+
+
+        document.onclick = function (e){
+            if(e.target.id !== 'sidebar' && e.target.id !== 'toggle'){
+                toggle.classList.remove('active');
+                sidebar.classList.remove('active');
+            }
+        }
+
+        toggle.onclick = function(){
+            toggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+
+
+</body>
+</html>
